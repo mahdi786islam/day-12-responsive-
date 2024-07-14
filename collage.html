@@ -28,6 +28,32 @@
             grid-template-columns: repeat( 2, 1fr);
             gap: 5px;
         }
+        .blog-content-container{
+            height: 1200px;
+            margin-bottom: 5px;
+
+        }
+        .blog-content{
+            height: calc( (100% - 10px) / 2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            font-size: 20px;            
+        }
+        .blog-content-text{
+            height: 100%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            margin-left: 5px;
+        }
+        .blog-content-img{
+            height: 100%;
+            width: 50%;
+        }
         @media screen and (max-width: 576px) {
             .row{
                 height: auto;
@@ -41,7 +67,28 @@
     </style>
 </head>
 <body>
-    <header></header>
+    <header>
+        <section class="blog-content-container">
+            <div class="blog-content">
+                <div class="blog-content-img">
+                    <img src="images/A.jpg" alt="">
+                </div>
+                <div class="blog-content-text">
+                    <h2>A classic City</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A suscipit ullam blanditiis, beatae recusandae, ipsam aliquid quis voluptatibus, facere odio laborum veniam possimus veritatis. Odio impedit ratione, deleniti facilis numquam animi! Alias minus saepe, voluptate maiores natus officia officiis assumenda magni temporibus, nostrum similique beatae eos sequi ipsa iste placeat Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea corrupti sint deserunt pariatur sunt minima, itaque temporibus officiis exercitationem consectetur rerum quis incidunt error vero qui unde natus nisi eum! Facere voluptatum odit neque fugit, vero non iure tempora necessitatibus temporibus, ex autem molestiae eum enim repudiandae itaque totam molestias</p>
+                </div>
+            </div>
+            <div class="blog-content">
+                <div class="blog-content-text">
+                    <h2>An Umbrella Collage</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur repellendus temporibus ab quo ipsum necessitatibus vero recusandae animi culpa fuga ad provident debitis doloremque quam hic sint quisquam asperiores earum, soluta, sunt tempora neque fugiat ut! In ipsum blanditiis ullam vero facere eveniet aperiam sed, animi similique culpa suscipit eos. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque est exercitationem animi possimus quas minima asperiores voluptates nisi qui dicta! Modi blanditiis sit libero ullam nostrum beatae quo cupiditate dicta? Est nemo asperiores iusto illum hic quo ad eum officiis architecto omnis. Repellendus magnam accusamus soluta, voluptas velit sunt? Dolorum.</p>
+                </div>
+                <div class="blog-content-img">
+                    <img src="images/B.jpg" alt="">
+                </div>
+            </div>
+        </section>
+    </header>
     <main>
         <div class="row">
             <img src="images/A.jpg" alt="">
