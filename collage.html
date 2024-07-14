@@ -61,7 +61,7 @@
             grid-template-rows: repeat(3, 200px);
             gap: 20px;
             text-align: center;
-            
+            margin-bottom: 50px;
 
         }
         .box{
@@ -74,6 +74,42 @@
         #box-11, #box-12{
             grid-column: span 3;
         }
+        .header, .nav, .article, .sidebar, .advertise, .footer{
+            background-color: bisque;
+            border: 2px solid black;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        .header{
+            grid-area: header;
+        }
+        .nav{
+            grid-area: nav;
+        }
+        .article{
+            grid-area: article;
+        }
+        .sidebar{
+            grid-area: sidebar;
+        }
+        .advertise{
+            grid-area: advertise;
+        }
+        .footer{
+            grid-area: footer;
+        }
+        .container{
+            display: grid;
+            gap: 20px;
+            grid-template-areas: 
+            "header header   header   header"
+            "nav    article  article  sidebar"
+            "nav    article  article  advertise"
+            "footer footer   footer   footer"
+            
+            ;
+        }
+
 
         @media screen and (max-width: 1080px) {
             .row{
@@ -102,6 +138,16 @@
             #reverse-flex{
                 display: flex;
                 flex-direction: column-reverse;
+            }
+            .container{
+                grid-template-areas:
+                "advertise" 
+                "header"
+                "nav"
+                "article"
+                "sidebar"
+                "footer"
+                ;
             }
             
         }
@@ -168,6 +214,51 @@
             <div class="box" id="box-11">Box No. 11</div>
             <div class="box" id="box-12">Box No. 12</div>
         </div>
+
+        <section class="container">
+            
+                <div class="header">
+                    <h1>The header</h1>
+                </div>
+           
+            
+                <div class="nav">
+                    <ul>
+                        <li><a href="">Nav-1</a></li>
+                        <li><a href="">Nav-2</a></li>
+                        <li><a href="">Nav-3</a></li>
+                    </ul>
+                </div>
+                <article class="article">
+                    <h3>Main Content 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nulla dolor sunt doloremque omnis quis ratione adipisci veritatis! Corporis iure dolorem dolor rem magnam veritatis possimus est, sunt, maiores illum doloribus eaque veniam, asperiores dolore dicta. Deleniti nesciunt dolores perferendis itaque illo earum animi, beatae tenetur fugiat asperiores fuga quos.</p>
+                </article>
+                <article class="article">
+                    <h3>Main Content 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, sunt ab. Animi suscipit perspiciatis temporibus, iusto aliquam fugiat ut blanditiis quo! Tempora architecto molestias natus cumque praesentium officiis quis quae voluptate dicta laudantium, necessitatibus sapiente laborum rerum nam dolorem cum fugiat perferendis rem totam, nobis neque distinctio velit autem! Nihil?</p>
+                </article>
+            
+           
+                <div class="sidebar">
+                    <h4>The Sidebar</h4>
+                </div>
+                <div class="advertise">
+                    <h4>Advertisement</h4>
+                </div>
+           
+            
+                <div class="footer">
+                    <h4>The Footer</h4>
+                </div>
+              
+        </section>
+
+
+
+
+        
+
+
     </main>
 
 </body>
